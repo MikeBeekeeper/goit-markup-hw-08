@@ -1,0 +1,41 @@
+.logo {
+    color: var(--main-logo-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: var(--logo-letter-spacing);
+    text-decoration: none;
+
+        &--foot {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 1.19;
+            letter-spacing: var(--main-letter-spacing);
+            color: var(--foot-logo-color);
+            text-decoration: none;
+    
+            display: block;
+            margin-bottom: 20px;
+
+            text-align: center;
+
+            @media screen and (min-width: 1200px) {
+                text-align: left;
+            }
+        }
+}
+
+.header__logo {
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+    
+}
+
+.logo__accent {
+    color: var(--logo-accrnt-color);
+}
+
