@@ -34,6 +34,10 @@
     letter-spacing: var(--main-letter-spacing);
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .benefits-cards__item {
