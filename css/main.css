@@ -17,7 +17,7 @@ ul {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -50,6 +50,7 @@ button:hover, button:focus {
   --soc-link-color: #afb1b8;
   --portfolio-btn-color: #F5F4FA;
   --team-background-color: #F5F4FA;
+  --bg-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .visually-hidden {
@@ -209,6 +210,12 @@ body {
 .header-flex {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header-flex {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .nav {
@@ -405,25 +412,25 @@ body {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #C4C4C4;
-  background-image: url(../images/hero-over-mob.png), url(../images/hero-mob-1x.png);
+  background-image: var(--bg-gradient), url(../images/hero-mob-1x.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero-over-mob.png), url(/..images/hero-mob-2x.png);
+    background-image: var(--bg-gradient), url(../images/hero-mob-2x.png);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../images/hero-over-tab.png), url(/..images/hero-tab.png);
+    background-image: var(--bg-gradient), url(../images/hero-tab.png);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url(../images/imgoverlay.png), url(../images/herobg.jpg);
+    background-image: var(--bg-gradient), url(../images/herobg.jpg);
   }
 }
 
@@ -1027,7 +1034,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
   padding: 40px;
   text-align: center;
   background-color: var(--white-color);
@@ -1035,6 +1041,11 @@ body {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal-window {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-window {
@@ -1131,7 +1142,7 @@ body {
   color: #757575;
   margin-top: 20px;
 }
-@media screen and (min-width: 120px) {
+@media screen and (min-width: 1200px) {
   .modal-window__terms-label {
     font-size: 14px;
   }

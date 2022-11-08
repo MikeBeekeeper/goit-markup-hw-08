@@ -3,23 +3,31 @@
     padding-top: 118px;
     padding-bottom: 118px;
     background-color: #C4C4C4;
-    background-image: url(../images/hero-over-mob.png), url(../images/hero-mob-1x.png);
+    background-image: 
+    var(--bg-gradient),
+    url(../images/hero-mob-1x.png);
     background-repeat: no-repeat;
     background-size: cover;
     @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../images/hero-over-mob.png), url(/..images/hero-mob-2x.png);
+        background-image:        
+        var(--bg-gradient), 
+        url(../images/hero-mob-2x.png);
         }
 
     @media screen and (min-width: 768px) {
-        background-image: url(../images/hero-over-tab.png), url(/..images/hero-tab.png)
+        background-image: 
+        var(--bg-gradient),
+        url(../images/hero-tab.png)
     }
     
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 200px;
-        background-image: url(../images/imgoverlay.png), url(../images/herobg.jpg);
+        background-image: 
+        var(--bg-gradient),
+        url(../images/herobg.jpg);
     }
     
     }
